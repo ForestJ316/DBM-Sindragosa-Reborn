@@ -11305,6 +11305,7 @@ function bossModPrototype:AddSetIconOption(name, spellId, default, iconType, ico
 	if iconsUsed then
 		self.localization.options[name] = self.localization.options[name].." ("
 		for i=1, #iconsUsed do
+			i = #iconsUsed + 1 - i -- Show icons starting with skull instead of opposite side
 			--Texture ID 137009 if direct calling RaidTargetingIcons stops working one day
 			if		iconsUsed[i] == 1 then		self.localization.options[name] = self.localization.options[name].."|TInterface\\TargetingFrame\\UI-RaidTargetingIcons.blp:13:13:0:0:64:64:0:16:0:16|t"
 			elseif	iconsUsed[i] == 2 then		self.localization.options[name] = self.localization.options[name].."|TInterface\\TargetingFrame\\UI-RaidTargetingIcons.blp:13:13:0:0:64:64:16:32:0:16|t"
